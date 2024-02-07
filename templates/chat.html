@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini AI | Chat</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'output.css'%}" />
+    
+</head>
+
+<body class="h-screen w-screen flex justify-center items-center flex-col gap-3">
+    <style>
+        .loader {
+            width: 30px;
+            aspect-ratio: 2;
+            --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+            background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+            background-size: calc(100% / 3) 50%;
+            animation: l3 1s infinite linear;
+        }
+
+        @keyframes l3 {
+            20% {
+                background-position: 0% 0%, 50% 50%, 100% 50%;
+            }
+
+            40% {
+                background-position: 0% 100%, 50% 0%, 100% 50%;
+            }
+
+            60% {
+                background-position: 0% 50%, 50% 100%, 100% 0%;
+            }
+
+            80% {
+                background-position: 0% 50%, 50% 50%, 100% 100%;
+            }
+        }
+    </style>
+    <nav class="w-screen h-[6vh] flex justify-center items-end gap-1 absolute top-0">
+        <h1 class="text-3xl font-bold md:text-4xl">Chat Bot</h1>
+        <span class="text-xs text-gray-600 font-normal">powered by Gemini AI</span>
+    </nav>
+    <div class="border-2 max-h-[70vh] max-w-[95%] min-h-64 min-w-80 w-[60%] overflow-y-auto rounded-md p-5 flex flex-col gap-3 shadow-md"
+        id="chatBox">
+        <div class="msgBox p-2 rounded-md bg-[#deeeee] shadow-md">
+            <p id="role" class="font-bold">Gemini AI</p>
+            <p id="message">Hi Iam Chatbot, I can help you to clarify your doubts, Feel Free to ask questions?</p>
+        </div>
+
+    </div>
+    <div class="inputBox border-2 p-1 py-2 max-w-[95%] min-w-80 w-[60%] flex justify-evenly rounded-md shadow-lg">
+        <input class="px-1 p-0.5 w-[80%] md:w-[90%]" type="text" id="messageInput" placeholder="Type a message" />
+        <button type="button" class="bg-slate-700 text-white px-2 py-1 rounded-md" id="message-submit">
+            Send
+        </button>
+    </div>
+</body>
+<script src="{% static 'app.js'%}"></script>
+
+</html>

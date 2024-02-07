@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini AI</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'output.css' %}">
+</head>
+<body class="bg-black text-white">
+    <nav class="w-screen h-[10vh] flex justify-center items-center">
+        <h1 class="text-3xl font-bold">Chat Bot</h1>
+    </nav>
+    {% block content %}
+    
+
+    <div class="w-screen h-[90vh] flex flex-col justify-center items-center gap-2">
+        <h2 class="text-4xl font-bold">Hello</h2>
+        <button class="bg-blue-600  px-2 py-1 rounded-md shadow-md hover:bg-blue-700" type="button"><a href="{% url 'chat'  %}">Explore ChatBot</a></button>
+    </div>
+    {% endblock %}
+
+    
+</body>
+</html>
