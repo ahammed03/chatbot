@@ -17,6 +17,17 @@ To use the chatbot application, you need to have Python and Django installed on 
    ```bash
    pip install -q -U google-generativeai
 
+3. Google API Key Setup
+
+This repository contains a Django project that utilizes the Google API for various functionalities. To use the Google API services, you need to obtain an API key from the Google Cloud Platform.
+
+## Obtaining the API Key
+
+1. Visit the [ ai.google.dev ](https://ai.google.dev/tutorials/setup) website and sign in with your Google account.
+
+2. Paste your api key in root Directory/api/views.py
+   ```bash
+   GOOGLE_API_KEY = "your_api_key"
 
 
 # Usage
